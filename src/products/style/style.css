@@ -1,32 +1,36 @@
-.product-list {
+.productList {
   display: flex;
   flex-wrap: wrap;
 }
 
-.product-card {
+.productCard {
   flex: 1;
   margin: 10px;
   padding: 10px;
   border: 1px solid #ccc;
   text-align: center;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  text-decoration: none;
+  color: black;
 }
-
-.product-card img {
+.productCard img {
   max-width: 100%;
   max-height: 150px;
 }
 
-.product-card h3 {
+.productCard h3 {
   font-size: 16px;
 }
 
-.product-card p {
+.productCard p {
   font-size: 14px;
 }
 
 /* Dört sütunlu bir düzen oluşturmak için medya sorguları kullanabilirsiniz */
 @media (min-width: 768px) {
-  .product-card {
+  .productCard {
     flex-basis: 25%;
   }
 }

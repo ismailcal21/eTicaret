@@ -1,0 +1,36 @@
+/* CSS dosyanızın içinde bu kodu kullanabilirsiniz */
+
+.button-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.sort-button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s, transform 0.2s;
+  position: relative;
+}
+
+.sort-button:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #62f8ad;
+
+  transform-origin: top;
+  transition: transform 0.3s; /* Kayan efekt */
+  width: 0;
+  height: 100%;
+  transition: 1s;
+  opacity: 0.5;
+}
+.sort-button:hover:after {
+  width: 100%;
+}

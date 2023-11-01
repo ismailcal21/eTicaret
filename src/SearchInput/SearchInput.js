@@ -1,6 +1,5 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import axios from "axios";
 
 const SearchInput = ({ setFilteredProducts, products }) => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -15,6 +14,9 @@ const SearchInput = ({ setFilteredProducts, products }) => {
   const handleInputChange = (e) => {
     setSearchTerm(e.target.value);
   };
+  if (products === null) {
+    return <p>Loading...</p>;
+  }
 
   return (
     <div style={styles.inputContainer}>

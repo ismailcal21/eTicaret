@@ -3,23 +3,24 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { setProduct } from "../redux/reducers/myReducer";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
-import SearchInput from "../SearchInput/SearchInput";
+import SortedProductList from "../sortedProducts/SortedProducts";
+import "./style/style.css";
+import Header from "../components/header/Header";
 
 function ProductList() {
   const [products, setProducts] = useState([]);
-  const [filteredProducts, setFilteredProducts] = useState([]);
+  const [sortedProducts, setSortedProducts] = useState([]);
   const dispatch = useDispatch();
 
   useEffect(() => {
     // JSON Server API'sini tanımlayın
-    const apiUrl = "";
 
     axios
       .get("http://localhost:3004/products")
       .then((res) => {
-        console.log("res", res);
+        //console.log("res", res);
         setProducts(res.data);
         dispatch(
           setProduct({
@@ -32,27 +33,32 @@ function ProductList() {
       });
   }, []);
 
+  if (products === null) {
+    return <p>Loading...</p>;
+  }
+
   return (
     <>
-      <div style={styles.inputContainer}>
-        <SearchInput
-          setFilteredProducts={setFilteredProducts}
+      <Header />
+      <div>
+        <SortedProductList
           products={products}
-          style={styles.input}
+          setSortedProducts={setSortedProducts}
         />
       </div>
-      <div style={styles.productList}>
-        {filteredProducts.map((product, index) => (
-          <div key={index} style={styles.productCard}>
+
+      <div className="productList ">
+        {sortedProducts.map((product, index) => (
+          <Link key={index} className="productCard">
             <img
               src={product.image}
               alt={product.name}
-              style={styles.productImage}
+              className="productImage"
             />
-            <h3 style={styles.productName}>{product.name}</h3>
-            <p style={styles.productPrice}>Fiyat: {product.price} TL</p>
-            <p style={styles.productCategory}>Kategori: {product.category}</p>
-          </div>
+            <h3 className="productName">{product.name}</h3>
+            <p className="productPrice">Fiyat: {product.price} TL</p>
+            <p className="productCategory">Kategori: {product.category}</p>
+          </Link>
         ))}
       </div>
     </>
@@ -62,42 +68,3 @@ function ProductList() {
 export default ProductList;
 
 //https://api.themoviedb.org/3/discover/movie
-const styles = {
-  inputContainer: {
-    width: "100%",
-    maxHeight: "200px",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  input: {
-    width: "50%",
-  },
-  productList: {
-    display: "flex",
-    flexWrap: "wrap",
-    width: "100%",
-
-    borderColor: "black",
-  },
-  productCard: {
-    width: "30%",
-    margin: "10px",
-    padding: "10px",
-    border: "1px solid #ccc",
-    textAlign: "center",
-  },
-  productImage: {
-    maxWidth: "100%",
-    maxHeight: "150px",
-  },
-  productName: {
-    fontSize: "16px",
-  },
-  productPrice: {
-    fontSize: "14px",
-  },
-  productCategory: {
-    fontSize: "14px",
-  },
-};

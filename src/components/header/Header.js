@@ -1,21 +1,47 @@
-import React from "react";
+import React, { useState } from "react";
 import "./css/Header.css"; // Header bileşeninin stil dosyası
+import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 const Header = () => {
+  const [linkEnabled, setLinkEnabled] = useState(true);
+  const categories = useSelector((state) => state.categories.categories);
+  //console.log("categories", categories);
+
+  const handleClick = () => {
+    if (linkEnabled) {
+      // Bağlantı işlemini gerçekleştirin
+      setLinkEnabled(false);
+      // Ardışık tıklamaları engellemek için bağlantıyı devre dışı bırakın
+      setTimeout(() => {
+        setLinkEnabled(true);
+      }, 1000); // 1 saniye sonra bağlantıyı tekrar etkinleştirin
+    }
+  };
+
+  if (categories === null) {
+    return <p>Loading...</p>;
+  }
   return (
     <header className="header">
       <div className="left">
         <div className="logo">Your Logo</div>
+
         <ul className="categories">
           <li>
-            <a href="#">Kategori 1</a>
+            <Link to="/">Home</Link>
           </li>
+          {categories.map((category, index) => (
+            <li key={index}>
+              <Link href="">{category.name}</Link>
+            </li>
+          ))}
           <li>
-            <a href="#">Kategori 2</a>
+            <Link to="/productList" onClick={handleClick}>
+              Fiyata Gore
+            </Link>
           </li>
-          <li>
-            <a href="#">Kategori 3</a>
-          </li>
+
           {/* Diğer kategorileri buraya ekleyin */}
         </ul>
       </div>
