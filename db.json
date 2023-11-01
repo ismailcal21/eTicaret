@@ -1,0 +1,158 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Ürün 1",
+      "price": 19.99,
+      "image": "https://www.umutspot.com/wp-content/uploads/2018/11/Elektronik-e%C5%9Fya-1.png",
+      "category": "Elektronik"
+    },
+    {
+      "id": 2,
+      "name": "Ürün 2",
+      "price": 29.99,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTV-OD0tnuw_or2SssB7xzJ1RHOFRoVhqnM2Q&usqp=CAU",
+      "category": "Giyim"
+    },
+    {
+      "id": 3,
+      "name": "Ürün 3",
+      "price": 14.99,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTw9yYGiP4wXh9v8G8DomG3wSca-swpWMJF9Q&usqp=CAU",
+      "category": "Spor"
+    },
+    {
+      "id": 4,
+      "name": "Ürün 4",
+      "price": 24.99,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRL4cZ1pRVRUoLMCvPGlpT2IWsSIWcotuj0ow&usqp=CAU",
+      "category": "Elektronik"
+    },
+    {
+      "id": 5,
+      "name": "Ürün 5",
+      "price": 34.99,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTV-OD0tnuw_or2SssB7xzJ1RHOFRoVhqnM2Q&usqp=CAU",
+      "category": "Giyim"
+    },
+    {
+      "id": 6,
+      "name": "Ürün 6",
+      "price": 22.99,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKxpVkBP4n12qtbiA6fsfDrSO9ksJXGzuYdA&usqp=CAU",
+      "category": "Spor"
+    },
+    {
+      "id": 7,
+      "name": "Ürün 7",
+      "price": 39.99,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2O3_2ttHRyhohbNkg7jtFTIjItJsJWHOxnQ&usqp=CAU",
+      "category": "Elektronik"
+    },
+    {
+      "id": 8,
+      "name": "Ürün 8",
+      "price": 15.99,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhkizrgq_6rRzdU19tCT7cKULq2fY6Z1574A&usqp=CAU",
+      "category": "Giyim"
+    },
+    {
+      "id": 9,
+      "name": "Ürün 9",
+      "price": 49.99,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeGgFZ57n8dXx-f9EBIBs0iKefyyYYZSFbEQ&usqp=CAU",
+      "category": "Spor"
+    },
+    {
+      "id": 10,
+      "name": "Ürün 10",
+      "price": 19.99,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpbIqFoj4HIDGU4VUa41bz8T0oXl6JnDoxyw&usqp=CAU",
+      "category": "Elektronik"
+    },
+    {
+      "id": 11,
+      "name": "Ürün 11",
+      "price": 29.99,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHChPyPe16WuVvhjk4xQx-nos4PqIkuW-TBw&usqp=CAU",
+      "category": "Giyim"
+    },
+    {
+      "id": 12,
+      "name": "Ürün 12",
+      "price": 14.99,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT44-2UAZOWRiUTDvONW2tbJNuipbDM992LFg&usqp=CAU",
+      "category": "Spor"
+    },
+    {
+      "id": 13,
+      "name": "Ürün 13",
+      "price": 24.99,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAeNVfqY0a0Osd5HK9GcYKGmwf4SpO9rNlsg&usqp=CAU",
+      "category": "Elektronik"
+    },
+    {
+      "id": 14,
+      "name": "Ürün 14",
+      "price": 34.99,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDHmCmx3Xt46C1Qg572ECC9cQiGOIi-D9Gqg&usqp=CAU",
+      "category": "Giyim"
+    },
+    {
+      "id": 15,
+      "name": "Ürün 15",
+      "price": 22.99,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWxbcuYmTD8xHixA5TR8gzEC3xvau7zNZjvA&usqp=CAU",
+      "category": "Spor"
+    },
+    {
+      "id": 16,
+      "name": "Ürün 16",
+      "price": 39.99,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRrNvPKiivpfjhqjhVgxtBUD2SD31dSESzYQ&usqp=CAU",
+      "category": "Elektronik"
+    },
+    {
+      "id": 17,
+      "name": "Ürün 17",
+      "price": 15.99,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQzXNJN2fhXf-cN9BuzyljYsh4J2swL18q-Q&usqp=CAU",
+      "category": "Giyim"
+    },
+    {
+      "id": 18,
+      "name": "Ürün 18",
+      "price": 49.99,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIZ6Ag0gq7NvIyRZsc3PyIBSWtp8zHH8a6og&usqp=CAU",
+      "category": "Spor"
+    },
+    {
+      "id": 19,
+      "name": "Ürün 19",
+      "price": 19.99,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDF2nErYGpVtcP6Wm81w_BjXpOuVzpvV1BYQ&usqp=CAU",
+      "category": "Elektronik"
+    },
+    {
+      "id": 20,
+      "name": "Ürün 20",
+      "price": 29.99,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoMGgEDU1KX2EqUa-cEE0qz0M42DeQa0qQEA&usqp=CAU",
+      "category": "Giyim"
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Elektronik"
+    },
+    {
+      "id": 2,
+      "name": "Giyim"
+    },
+    {
+      "id": 3,
+      "name": "Spor"
+    }
+  ]
+}

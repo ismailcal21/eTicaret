@@ -1,24 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import { useSelector } from "react-redux";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import ProductList from "./products/ProductList";
+import Header from "./components/header/Header";
+import Giris from "./Giris/Giris";
+import Home from "./Home/Home";
+import { useEffect } from "react";
+import axios from "axios";
 
 function App() {
+  const product = useSelector((state) => state.product.categories);
+  console.log("product", product);
+  useEffect(() => {
+    axios
+      .get("http://localhost:3004/categories")
+      .then((res) => {
+        console.log("categoryRes", res);
+      })
+      .catch((err) => {
+        console.log("categoryErr", err);
+      });
+  }, []);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route>
+          <Route index element={<Giris />} />
+          <Route path="home" element={<Home />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 

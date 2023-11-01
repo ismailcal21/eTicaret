@@ -1,0 +1,32 @@
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.product-card {
+  flex: 1;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+.product-card img {
+  max-width: 100%;
+  max-height: 150px;
+}
+
+.product-card h3 {
+  font-size: 16px;
+}
+
+.product-card p {
+  font-size: 14px;
+}
+
+/* Dört sütunlu bir düzen oluşturmak için medya sorguları kullanabilirsiniz */
+@media (min-width: 768px) {
+  .product-card {
+    flex-basis: 25%;
+  }
+}
