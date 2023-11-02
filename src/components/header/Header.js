@@ -37,12 +37,12 @@ const Header = () => {
         </ul>
       </div>
       <div className="right">
-        <a href="#" className="login">
+        <Link to={"/"} className="login">
           Login
-        </a>
-        <a href="#" className="signup">
+        </Link>
+        <Link to={"/"} className="signup">
           Sign up
-        </a>
+        </Link>
       </div>
     </header>
   );

@@ -8,8 +8,9 @@ import SearchInput from "../SearchInput/SearchInput";
 import Loading from "../Loading/Loading";
 
 const Home = () => {
-  const [filteredProducts, setFilteredProducts] = useState([]);
+  // const [filteredProducts, setFilteredProducts] = useState([]);
   const products = useSelector((state) => state.product.categories);
+
   //console.log("product1", products);
 
   if (products == null) {
@@ -20,27 +21,10 @@ const Home = () => {
       <Header />
       <div>
         <SearchInput
-          setFilteredProducts={setFilteredProducts}
+          // setFilteredProducts={setFilteredProducts}
           products={products}
         />
-        <>
-          <div className="productList ">
-            {filteredProducts.map((product, index) => (
-              <Link key={index} className="productCard">
-                <img
-                  src={product.image}
-                  alt={product.name}
-                  className="productImage"
-                />
-                <h3 className="productName">{product.name}</h3>
-                <p className="productPrice">Fiyat: {product.price} TL</p>
-                <p className="productCategory">Kategori: {product.category}</p>
-                <button className="btn btn-success m-2">Detail</button>
-                <button className="btn btn-warning">Duzenle</button>
-              </Link>
-            ))}
-          </div>
-        </>
+        <></>
       </div>
     </div>
   );
