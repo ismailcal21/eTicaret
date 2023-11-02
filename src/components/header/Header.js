@@ -37,10 +37,10 @@ const Header = () => {
         </ul>
       </div>
       <div className="right">
-        <Link to="/" className="login">
+        <Link href="#" className="login">
           Login
         </Link>
-        <Link to="/" className="signup">
+        <Link href="#" className="signup">
           Sign up
         </Link>
       </div>

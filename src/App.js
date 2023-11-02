@@ -1,8 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ProductList from "./products/ProductList";
-import Header from "./components/header/Header";
-import Giris from "./Giris/Giris";
 import Home from "./Home/Home";
 import { useEffect } from "react";
 import axios from "axios";

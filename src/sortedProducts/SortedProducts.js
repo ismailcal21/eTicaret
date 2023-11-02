@@ -25,9 +25,11 @@ const SortedProductList = ({ products, setSortedProducts }) => {
   return (
     <div>
       <div className="button-container">
-        <button className="sort-button" onClick={handleSort}>
-          {sortOrder === "asc" ? "Artan" : "Azalan"} Fiyata Göre Sırala
+        <button className="sort-button">
+          {/* {sortOrder === "asc" ? "Artan" : "Azalan"} Fiyata Göre Sırala */}
+          sırala
         </button>
+        <button>selam</button>
       </div>
       {/* <ul>
         {sortedProducts.map((product, index) => (
