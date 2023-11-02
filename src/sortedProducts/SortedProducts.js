@@ -15,7 +15,7 @@ const SortedProductList = ({ products, setSortedProducts }) => {
     });
 
     setSortedProducts(sorted);
-  }, [products, sortOrder, setSortedProducts]);
+  }, [products, sortOrder]);
 
   const handleSort = () => {
     // Sıralama düzenini tersine çevirin
