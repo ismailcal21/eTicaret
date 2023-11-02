@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 import SortedProductList from "../sortedProducts/SortedProducts";
 import "./style/style.css";
 import Header from "../components/header/Header";
+import Loading from "../Loading/Loading";
 
 function ProductList() {
   const [products, setProducts] = useState([]);
@@ -31,10 +32,10 @@ function ProductList() {
       .catch((err) => {
         console.log(err);
       });
-  }, []);
+  }, [dispatch]);
 
   if (products === null) {
-    return <p>Loading...</p>;
+    return <Loading />;
   }
 
   return (
@@ -58,6 +59,15 @@ function ProductList() {
             <h3 className="productName">{product.name}</h3>
             <p className="productPrice">Fiyat: {product.price} TL</p>
             <p className="productCategory">Kategori: {product.category}</p>
+            <div>
+              <Link
+                to={`/productList/${product.id}`}
+                className="btn btn-success me-2"
+              >
+                Detail
+              </Link>
+              <Link className="btn btn-warning">Duzenle</Link>
+            </div>
           </Link>
         ))}
       </div>

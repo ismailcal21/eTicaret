@@ -19,7 +19,8 @@
       "name": "Ürün 3",
       "price": 14.99,
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTw9yYGiP4wXh9v8G8DomG3wSca-swpWMJF9Q&usqp=CAU",
-      "category": "Spor"
+      "category": "Spor",
+      "description": "Kaliteli Pamuk Malzeme: Pijama takımı, %100 pamuklu malzeme kullanılarak üretildi. Yumuşak dokusuyla cildinizi nazikçe sarar.Rahat Kesim: Rahat ve geniş kesimi sayesinde pijama takımı, rahat bir uyku deneyimi sunar. Hareket özgürlüğünüze kısıtlama getirmez.Şık Tasarım Detayları: Pijama üstü, modern kesimi ve zarif detaylarıyla gecenin konforunu şıklıkla bir araya getirir.Esnek Bel Bandı: Pijama altının bel bandı, elastik yapısı sayesinde belinize rahatça oturur ve hareket ederken rahatsızlık vermez.Farklı Renk Seçenekleri: Yumuşak Dokulu Pamuk Pijama Takımı, farklı renk seçenekleri sunarak tarzınıza uygun bir tercih yapmanızı sağlar."
     },
     {
       "id": 4,
@@ -89,7 +90,8 @@
       "name": "Ürün 13",
       "price": 24.99,
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAeNVfqY0a0Osd5HK9GcYKGmwf4SpO9rNlsg&usqp=CAU",
-      "category": "Elektronik"
+      "category": "Elektronik",
+      "description": "Kaliteli Pamuk Malzeme: Pijama takımı, %100 pamuklu malzeme kullanılarak üretildi. Yumuşak dokusuyla cildinizi nazikçe sarar.Rahat Kesim: Rahat ve geniş kesimi sayesinde pijama takımı, rahat bir uyku deneyimi sunar. Hareket özgürlüğünüze kısıtlama getirmez.Şık Tasarım Detayları: Pijama üstü, modern kesimi ve zarif detaylarıyla gecenin konforunu şıklıkla bir araya getirir.Esnek Bel Bandı: Pijama altının bel bandı, elastik yapısı sayesinde belinize rahatça oturur ve hareket ederken rahatsızlık vermez.Farklı Renk Seçenekleri: Yumuşak Dokulu Pamuk Pijama Takımı, farklı renk seçenekleri sunarak tarzınıza uygun bir tercih yapmanızı sağlar."
     },
     {
       "id": 14,

@@ -1,8 +1,10 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import Loading from "../Loading/Loading";
 
 const SearchInput = ({ setFilteredProducts, products }) => {
   const [searchTerm, setSearchTerm] = useState("");
+
   useEffect(() => {
     // Ürünleri ara ve filtrele
     const filtered = products.filter((product) =>
@@ -15,7 +17,7 @@ const SearchInput = ({ setFilteredProducts, products }) => {
     setSearchTerm(e.target.value);
   };
   if (products === null) {
-    return <p>Loading...</p>;
+    return <Loading />;
   }
 
   return (

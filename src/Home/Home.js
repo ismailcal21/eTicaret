@@ -5,6 +5,7 @@ import Header from "../components/header/Header";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import SearchInput from "../SearchInput/SearchInput";
+import Loading from "../Loading/Loading";
 
 const Home = () => {
   const [filteredProducts, setFilteredProducts] = useState([]);
@@ -12,7 +13,7 @@ const Home = () => {
   //console.log("product1", products);
 
   if (products == null) {
-    return <p>Loading...</p>;
+    return <Loading />;
   }
   return (
     <div>
@@ -34,6 +35,8 @@ const Home = () => {
                 <h3 className="productName">{product.name}</h3>
                 <p className="productPrice">Fiyat: {product.price} TL</p>
                 <p className="productCategory">Kategori: {product.category}</p>
+                <button className="btn btn-success m-2">Detail</button>
+                <button className="btn btn-warning">Duzenle</button>
               </Link>
             ))}
           </div>

@@ -1,0 +1,125 @@
+/* ProductCard.css
+.product-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 16px;
+  display: flex;
+  align-items: center;
+  background-color: #f9f9f9;
+}
+
+.product-image {
+  width: 100px;
+  height: 100px;
+  margin-right: 16px;
+  object-fit: cover;
+}
+
+.product-details {
+  flex: 1;
+}
+
+.product-name {
+  font-size: 1.5rem;
+  color: #333;
+  margin: 0;
+}
+
+.product-description {
+  font-size: 1rem;
+  color: #666;
+}
+
+.product-price {
+  font-size: 1.25rem;
+  color: #e91e63;
+  font-weight: bold;
+} */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 280px;
+  height: 400px;
+  box-shadow: 20px 20px 20px black;
+  position: relative;
+  overflow: hidden;
+}
+.card:hover {
+  transform: rotate(360deg);
+}
+.card img {
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s ease-in-out;
+}
+.card:hover img {
+  transform: scale(1.1) rotate(-3deg);
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(
+    to right,
+    rgba(68, 71, 68, 0.2),
+    rgba(60, 63, 61, 0.2)
+  );
+  width: 100%;
+  height: 0;
+  transition: all 0.5s ease-in-out;
+}
+.card:hover::after {
+  height: 100%;
+}
+.info {
+  width: 100%;
+  height: 60px;
+  background-color: rgba(0, 0, 0, 0.3);
+  text-align: center;
+  position: absolute;
+  bottom: 1px;
+  color: #fff;
+  z-index: 2;
+  transition: all 0.5s ease-in-out;
+}
+.info button {
+  width: 100px;
+  height: 35px;
+}
+.info button:hover {
+  box-shadow: 5px 5px 20px black;
+}
+
+.info p,
+button {
+  visibility: hidden;
+}
+
+.card:hover .info {
+  height: 170px;
+}
+.card:hover p {
+  visibility: visible;
+  transition: all 0.5s ease-in-out;
+}
+.card:hover button {
+  visibility: visible;
+  transition: all 0.5s ease-in-out;
+}

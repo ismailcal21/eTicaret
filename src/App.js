@@ -7,6 +7,8 @@ import Home from "./Home/Home";
 import { useEffect } from "react";
 import axios from "axios";
 import { setCategories } from "./redux/reducers/myCategories";
+import ProductListDetails from "./products/components/ProductListDetails";
+import Category from "./category/Category";
 
 function App() {
   const product = useSelector((state) => state.product.categories);
@@ -32,7 +34,12 @@ function App() {
       <Routes>
         <Route>
           <Route index element={<Home />} />
-          <Route path="productList" element={<ProductList />} />
+          <Route path="/productList" element={<ProductList />} />
+          <Route
+            path="/productList/:productId"
+            element={<ProductListDetails />}
+          />
+          <Route path="/productList/:categoryName" element={<Category />} />
         </Route>
       </Routes>
     </BrowserRouter>
