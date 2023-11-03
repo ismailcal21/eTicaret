@@ -2,8 +2,15 @@
 
 .button-container {
   text-align: center;
+<<<<<<< HEAD
 
   margin-bottom: 22px;
+=======
+  margin-bottom: 29px;
+  left: auto;
+  margin-left: 12px;
+  display: inline;
+>>>>>>> d87aa7507ac2229f332d80a03f1d767b896b3804
 }
 
 .sort-button {
