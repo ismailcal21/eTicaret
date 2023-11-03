@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./style.css"; // Stil dosyasını ekleyin
+import { Link } from "react-router-dom";
 
 const SortedProductList = ({ products, setSortedProducts }) => {
   const [sortOrder, setSortOrder] = useState("asc"); // varsayılan sıralama artan sıra
@@ -25,19 +26,20 @@ const SortedProductList = ({ products, setSortedProducts }) => {
   return (
     <div>
       <div className="button-container">
-        <button className="sort-button">
-          {/* {sortOrder === "asc" ? "Artan" : "Azalan"} Fiyata Göre Sırala */}
-          sırala
-        </button>
-        <button>selam</button>
+        <Link className="btn btn-sm btn-danger" onClick={handleSort}>
+          {sortOrder == "asc" ? "Artan" : "Azalan"}
+          Fiyata Göre Sırala
+        </Link>
       </div>
-      {/* <ul>
-        {sortedProducts.map((product, index) => (
-          <li key={index}>
-            {product.name} - ${product.price}
-          </li>
-        ))}
-      </ul> */}
+      {
+        // <ul>
+        //   {sortedProducts.map((product, index) => (
+        //     <li key={index}>
+        //       {product.name} - ${product.price}
+        //     </li>
+        //   ))}
+        // </ul>
+      }
     </div>
   );
 };

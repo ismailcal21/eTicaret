@@ -34,6 +34,9 @@ const Header = () => {
           <li>
             <Link to="/productList">Fiyata Gore</Link>
           </li>
+          <li>
+            <Link to="/sepet">Sepete Git</Link>
+          </li>
         </ul>
       </div>
       <div className="right">

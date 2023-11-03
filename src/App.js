@@ -7,6 +7,7 @@ import axios from "axios";
 import { setCategories } from "./redux/reducers/myCategories";
 import ProductListDetails from "./products/components/ProductListDetails";
 import Category from "./category/Category";
+import Sepet from "./sepet/Sepet";
 
 function App() {
   const product = useSelector((state) => state.product.categories);
@@ -38,6 +39,7 @@ function App() {
             element={<ProductListDetails />}
           />
           <Route path="/productList/:categoryName" element={<Category />} />
+          <Route path="/sepet" element={<Sepet />} />
         </Route>
       </Routes>
     </BrowserRouter>

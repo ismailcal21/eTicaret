@@ -3,26 +3,34 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { setProduct } from "../redux/reducers/myReducer";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import SortedProductList from "../sortedProducts/SortedProducts";
 import "./style/style.css";
 import Header from "../components/header/Header";
 import Loading from "../Loading/Loading";
+import { addItem } from "../redux/reducers/cartSlice";
 
 function ProductList() {
-  const [products, setProducts] = useState([]);
+  //const [products, setProducts] = useState([]);
   const [sortedProducts, setSortedProducts] = useState([]);
+  const products = useSelector((state) => state.product.categories);
+  //console.log("productsDtay", products);
+  const cart = useSelector((state) => state.cart.items);
+  console.log("cart", cart);
+
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    // JSON Server API'sini tanımlayın
+  const addToCart = (product) => {
+    dispatch(addItem(product));
+  };
 
+  useEffect(() => {
     axios
       .get("http://localhost:3004/products")
       .then((res) => {
         //console.log("res", res);
-        setProducts(res.data);
+        //setProducts(res.data);
         dispatch(
           setProduct({
             categories: res.data,
@@ -30,9 +38,9 @@ function ProductList() {
         );
       })
       .catch((err) => {
-        console.log(err);
+        console.log("productlist err", err);
       });
-  }, [dispatch]);
+  }, []);
 
   if (products === null) {
     return <Loading />;
@@ -66,7 +74,12 @@ function ProductList() {
               >
                 Detail
               </Link>
-              <Link className="btn btn-warning">Duzenle</Link>
+              <Link
+                onClick={() => addToCart(product)}
+                className="btn btn-warning"
+              >
+                Sepete Ekle
+              </Link>
             </div>
           </Link>
         ))}

@@ -5,13 +5,13 @@ import Loading from "../Loading/Loading";
 const SearchInput = ({ setFilteredProducts, products }) => {
   const [searchTerm, setSearchTerm] = useState("");
 
-  // useEffect(() => {
-  //   // Ürünleri ara ve filtrele
-  //   const filtered = products.filter((product) =>
-  //     product.name.toLowerCase().includes(searchTerm.toLowerCase())
-  //   );
-  //   setFilteredProducts(filtered);
-  // }, [searchTerm, products]);
+  useEffect(() => {
+    //Ürünleri ara ve filtrele
+    const filtered = products.filter((product) =>
+      product.name.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+    setFilteredProducts(filtered);
+  }, [searchTerm]);
 
   const handleInputChange = (e) => {
     setSearchTerm(e.target.value);
