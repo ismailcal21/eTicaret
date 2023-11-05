@@ -13,16 +13,27 @@ import { addItem } from "../redux/reducers/cartSlice";
 
 function ProductList() {
   //const [products, setProducts] = useState([]);
+  const [itemsInCart, setItemsInCart] = useState([]);
   const [sortedProducts, setSortedProducts] = useState([]);
   const products = useSelector((state) => state.product.categories);
   //console.log("productsDtay", products);
   const cart = useSelector((state) => state.cart.items);
   console.log("cart", cart);
+  console.log("itemsInCart", itemsInCart);
 
   const dispatch = useDispatch();
 
+  // const addToCart = (product) => {
+  //   dispatch(addItem(product));
+  // };
+
   const addToCart = (product) => {
-    dispatch(addItem(product));
+    setItemsInCart([...itemsInCart, product]);
+  };
+
+  const removeFromCart = (product) => {
+    const updatedCart = itemsInCart.filter((item) => item.id !== product.id);
+    setItemsInCart(updatedCart);
   };
 
   useEffect(() => {
@@ -75,10 +86,18 @@ function ProductList() {
                 Detail
               </Link>
               <Link
+                // onClick={() => addToCart({ product })}
                 onClick={() => addToCart(product)}
-                className="btn btn-warning"
+                className="btn btn-sm me-2 btn-warning"
               >
                 Sepete Ekle
+              </Link>
+              <Link
+                // onClick={() => addToCart({ product })}
+                onClick={() => removeFromCart(product)}
+                className="btn btn-sm btn-danger"
+              >
+                Sepetten Cikar
               </Link>
             </div>
           </Link>

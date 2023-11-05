@@ -8,6 +8,7 @@ import { setCategories } from "./redux/reducers/myCategories";
 import ProductListDetails from "./products/components/ProductListDetails";
 import Category from "./category/Category";
 import Sepet from "./sepet/Sepet";
+import SearchInput from "./SearchInput/SearchInput";
 
 function App() {
   const product = useSelector((state) => state.product.categories);
@@ -32,7 +33,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route>
-          <Route index element={<Home />} />
+          <Route index element={<SearchInput />} />
           <Route path="/productList" element={<ProductList />} />
           <Route
             path="/productList/:productId"

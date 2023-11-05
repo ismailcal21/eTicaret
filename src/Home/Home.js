@@ -8,7 +8,7 @@ import SearchInput from "../SearchInput/SearchInput";
 import Loading from "../Loading/Loading";
 
 const Home = () => {
-  const [filteredProducts, setFilteredProducts] = useState([]);
+  //const [filteredProducts, setFilteredProducts] = useState([]);
   const products = useSelector((state) => state.product.categories);
 
   //console.log("product1", products);
@@ -20,13 +20,14 @@ const Home = () => {
     <div>
       <Header />
       <div>
-        <SearchInput
+        {/* <SearchInput
           setFilteredProducts={setFilteredProducts}
           products={products}
-        />
-        <div className="productList ">
+          filteredProducts={filteredProducts}
+        /> */}
+        {/* <div className="productList ">
           {filteredProducts.map((product, index) => (
-            <Link key={index} className="productCard">
+            <div key={index} className="productCard">
               <img
                 src={product.image}
                 alt={product.name}
@@ -44,9 +45,9 @@ const Home = () => {
                 </Link>
                 <Link className="btn btn-warning">Duzenle</Link>
               </div>
-            </Link>
+            </div>
           ))}
-        </div>
+        </div> */}
       </div>
     </div>
   );
