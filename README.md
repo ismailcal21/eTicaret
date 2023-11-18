@@ -1,6 +1,6 @@
 ###
 
-<img width="500px" height="500px" src="gif2.gif"/>
+<img width="700px" height="500px" src="gif2.gif"/>
 
 # Getting Started with Create React App
 
