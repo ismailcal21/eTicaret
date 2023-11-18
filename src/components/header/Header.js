@@ -6,7 +6,7 @@ import Loading from "../../Loading/Loading";
 
 const Header = () => {
   const categories = useSelector((state) => state.categories.categories);
-  //console.log("categories", categories);
+  console.log("categories", categories);
 
   return (
     <header className="header">

@@ -17,7 +17,7 @@ function ProductList() {
   const [sortedProducts, setSortedProducts] = useState([]);
   const products = useSelector((state) => state.product.categories);
   //console.log("productsDtay", products);
-  const cart = useSelector((state) => state.cart.items);
+  const cart = useSelector((state) => state);
   console.log("cart", cart);
   console.log("itemsInCart", itemsInCart);
 
